@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threshub</title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+  <br></br>
+  <h1>Threshub</h1>
+  <h2>Log In</h2>
+  <h3>All fields required</h3>
+
+    <form>
+        <label for="uname">Username:</label><br>
+        <input type="text" id="uname" name="uname"><br>
+        <label for="pword">Password</label><br>
+        <input type="text" id="pword" name="pword"><br><br><br>
+        <input type="submit" id="login" value="Log In"><br>
+    <p id="troubleshoot">Cant get in?</p>
+    </form>
+
+<Script>
+document.getElementById('login').addEventListener('click', () => {
+      
+          const username = document.getElementById('uname').value;
+          const password = document.getElementById('pword').value;
+
+         
+          if (username === '' || password === '') {
+              alert('Both username and password are required!');
+          } else if (username === 'Threshold' && password === '1234') {
+              alert('Login successful! Welcome, Threshold Employee!');
+          } else {
+              alert('Invalid username or password. Please try again.');
+            }
+        });
+
+      document.getElementById('troubleshoot').addEventListener('click', () => {
+          alert('Need help? Try resetting your password.');
+      });
+</Script>
+   
+</body>
+</html>
